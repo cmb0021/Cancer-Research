@@ -1,0 +1,61 @@
+---
+title: "Cancer Research 1"
+author: "Christopher Barnes"
+date: "11/23/2017"
+output: html_document
+---
+
+#### This data can be found on the CDC website at https://www.cdc.gov/cancer/npcr/uscs/download_data.htm
+
+##### Citation:
+
+##### U.S. Cancer Statistics Working Group. United States Cancer Statistics: 1999-2014 Incidence and Mortality Web-based Report. Atlanta: U.S. Department of Health and Human Services, Centers for Disease Control and Prevention and National Cancer Institute; 2017. Available at: www.cdc.gov/uscs.
+
+##### The United States Cancer Statistics: Incidence and Mortality Web-based report is one of the products that fulfill NPCR’s goal of releasing these data to public health planners and others to monitor the burden of disease and to implement cancer prevention and control programs. Visit Cancer Data and Statistics Tools for information regarding the other products.
+
+
+#### Hints for reading the tables can be found at https://www.cdc.gov/cancer/npcr/uscs/hints.htm
+
+#### Glossary: https://www.cdc.gov/cancer/npcr/uscs/glossary.htm
+
+
+
+```{r}
+
+library(sas7bdat)
+library(dplyr)
+library(ggplot2)
+
+```
+
+```{r}
+
+brainbysite <- read.delim("/Users/cbarnes/Desktop/Cancer Research USCS_1999_2014_ASCII/BRAINBYSITE.TXT", header = TRUE, sep = "|") 
+# Data 
+
+byage <- read.delim("/Users/cbarnes/Desktop/Cancer Research USCS_1999_2014_ASCII/BYAGE.TXT", header = TRUE, sep = "|")
+
+byarea <- read.delim("/Users/cbarnes/Desktop/Cancer Research USCS_1999_2014_ASCII/BYAREA.TXT", header = TRUE, sep = "|")
+
+bysite <- read.delim("/Users/cbarnes/Desktop/Cancer Research USCS_1999_2014_ASCII/BYSITE.TXT", header = TRUE, sep = "|")
+
+childbyage_adj <- read.delim("/Users/cbarnes/Desktop/Cancer Research USCS_1999_2014_ASCII/CHILDBYAGE_ADJ.TXT", header = TRUE, sep = "|")
+
+childbyage_cr <- read.delim("/Users/cbarnes/Desktop/Cancer Research USCS_1999_2014_ASCII/CHILDBYAGE_CR.TXT", header = TRUE, sep = "|")
+
+childbysite <- read.delim("/Users/cbarnes/Desktop/Cancer Research USCS_1999_2014_ASCII/CHILDBYSITE.TXT", header = TRUE, sep = "|")
+
+icccbyage_adj <- read.delim("/Users/cbarnes/Desktop/Cancer Research USCS_1999_2014_ASCII/ICCCBYAGE_ADJ.TXT", header = TRUE, sep = "|")
+
+icccbyage_cr <- read.delim("/Users/cbarnes/Desktop/Cancer Research USCS_1999_2014_ASCII/ICCCBYAGE_CR.TXT", header = TRUE, sep = "|")
+
+icccbysite <- read.delim("/Users/cbarnes/Desktop/Cancer Research USCS_1999_2014_ASCII/ICCCBYSITE.TXT", header = TRUE, sep = "|")
+
+```
+
+
+```{r}
+
+# Here I need to join the tables together so I can then remove a bunch of stuff and start doing analysis.
+
+```
